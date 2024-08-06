@@ -9,6 +9,7 @@ function validatePasswords() {
     } else {
         confirmPasswordInput.setCustomValidity(""); // Clear the custom error
     }
+    showError(confirmPasswordInput);
 }
 
 form.addEventListener('submit', (e) => {
