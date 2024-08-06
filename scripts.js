@@ -10,21 +10,10 @@ function validatePasswords() {
         confirmPasswordInput.setCustomValidity(""); // Clear the custom error
     }
 }
-// submit.addEventListener('click', (e)=>{
-//     e.preventDefault();
-//     if (Array.from(inputs).every((input) => input.validity.valid)) {
-//         submitForm();
-//     } else {
-//         // alert('Please fill in all fields');
-//         console.log('Please fill in all fields');
-//     }
-// });
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(passwordInput.value);
-    console.log(confirmPasswordInput.value);
     if (!form.checkValidity()) {
-         // Prevent form submission if invalid
         console.log('Please fill in all fields');
     } else {
         submitForm(); // Call submitForm if everything is valid
