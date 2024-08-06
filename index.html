@@ -7,27 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <form id="sund-new-book" class="sund-new-book" novalidate>
-        <div class="sund-new-book__field">
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-            <span class="error">Please fill out this field</span>
+    <form id="form" novalidate>
+        <div id="done"></div>
+        <div class="sund-form__field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required autocomplete="email">
+            <span class="error"></span>
         </div>
-        <div class="sund-new-book__field">
-            <label for="author">Author</label>
-            <input type="text" name="author" id="author" required>
-            <span class="error">Please fill out this field</span>
+        <div class="sund-form__field">
+            <label for="country">Country</label>
+            <input type="text" name="country" id="country" minlength="3" required>
+            <span class="error"></span>
         </div>
-        <div class="sund-new-book__field">
-            <label for="pages">Number of pages</label>
-            <input type="number" name="pages" id="pages" required>
-            <span class="error">Please fill out this field</span>
+        <div class="sund-form__field">
+            <label for="zip">Zip Code</label>
+            <input type="text" name="zip" id="zip" pattern="^\d{5}$" minlength="5" maxlength="5" required>
+            <span class="error"></span>
         </div>
-        <div class="sund-new-book__field">
-            <label for="readOrNot">Read or not</label>
-            <input type="checkbox" name="readOrNot" id="readOrNot">
+        <div class="sund-form__field">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" minlength="8" required >
+            <span class="error"></span>
         </div>
-        <button id="submit-book" type="submit">Submit</button>
+        <div class="sund-form__field">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" required >
+            <span class="error"></span>
+        </div>
+        <button id="submit" type="submit">Submit</button>
     </form>
     <script src="scripts.js"></script>
 </body>

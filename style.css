@@ -1,4 +1,12 @@
 body{
     margin: 0;
 }
-
+/* .error{
+    display: none;
+} */
+input:valid{
+    border: 1px solid green;
+}
+input:invalid{
+    border: 1px solid red;
+}
