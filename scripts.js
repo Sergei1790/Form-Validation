@@ -8,8 +8,9 @@ function validatePasswords() {
         confirmPasswordInput.setCustomValidity("Passwords do not match");
     } else {
         confirmPasswordInput.setCustomValidity(""); // Clear the custom error
+        showError(confirmPasswordInput);
     }
-    showError(confirmPasswordInput);
+    
 }
 
 form.addEventListener('submit', (e) => {
